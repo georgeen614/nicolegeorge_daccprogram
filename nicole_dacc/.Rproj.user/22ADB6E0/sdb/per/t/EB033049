@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "myvariable<-10\nmy_var1able\nmy_variable\nlibrary(tidyverse)\nggplot(data=mpg)+\n  geom_point(mapping=aes(x=displ, y=hwy))\nfliter(mpg, cyl=8)\nfilter(diamond,carat>3)\nlibrary(tidyverse)\nggplot(data=mpg)+\n  geom_point(mapping=aes(x=displ, y=hwy))\nfilter(mpg, cyl==8)\nfilter(diamonds, carat>3)\nlibrary(nycflights13)\nlibrary(tidyverse)\nflights\nfilter(flights, dep_delay>=2)\nfilter(flights, dest== \"IAH\"|dest== \"HOU\")\ncarrier<- flights[,10]\ncarrier\nfilter (flights, carrier==\"UA\"| carrier==\"AA\"| carrier==\"DL\")\nsummer_flights<-filter(flights, month %in% c(6,7,8))\nsummer_flights\nfilter(flights, arr_delay>2 & dep_delay==0)\nfilter(flights, dep_delay>=1 & arr_time-sched_arr_time<30)\nfilter(flights, dep_time>=000 & dep_time<=600)\nfilter(flights, between(dep_time, 000, 600))\nfilter(flights, between(month,6,8))\nfilter(flights, is.na(dep_time))\n#other variables missing include flight dep_delay and arr_time, these flights probably got cancelled\nNA^0\n#NA^0 not missing because no matter what value NA is, any number to the 0 power is 1. All possible results are the same.\n#NA|TRUE is true because the result for all possible NA values is the same.\n#FALSE & NA is true because the result for all possible NA values is the same.\n#NA*0 is undefined because mathematically speaking, you have the possibility of infinity * 0 which is undefined.\narrange(flights, desc(is.na(dep_time)))\narrange(flights, dep_delay)\narrange(flights, distance/air_time)\narrange(flights, distance)\narrange(flights, desc(distance))\nselect(flights, dep_time, dep_delay, arr_time, arr_delay)\nselect(flights, dep_time, dep_delay, arr_time, arr_delay, everything())\nselect(flights, starts_with(\"dep\"), starts_with(\"arr\"))\nselect(flights, dep_time, arr_time, dep_time)\nselect(flights, matches(\"^(dep|arr)_\"))\n#even if you repeat the variable it still shows the variable once\nvars <- c(\"year\", \"month\", \"day\", \"dep_delay\", \"arr_delay\")\nselect(flights, vars)\nselect(flights, one_of(vars))\nselect(flights, contains(\"time\"))\nselect(flights, contains(\"TIME\"))\n#you can change it with an ignore helper function that works in the select function\n\n",
+    "created" : 1540902250817.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3800131998",
+    "id" : "EB033049",
+    "lastKnownWriteTime" : 1540920472,
+    "last_content_update" : 1540920472724,
+    "path" : "~/R/nicole_dacc/Nicole_George_week2.R",
+    "project_path" : "Nicole_George_week2.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
